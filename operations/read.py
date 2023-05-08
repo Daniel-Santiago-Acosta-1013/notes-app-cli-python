@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 from models.note import Note
+from models.tag import Tag
 from database.db import SessionLocal
 import markdown
 import json
@@ -76,4 +77,3 @@ def import_notes():
     db.close()
 
     print(f"Notas importadas desde '{file_path}'.")
-
