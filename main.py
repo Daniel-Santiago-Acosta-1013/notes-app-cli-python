@@ -1,4 +1,5 @@
 from operations import create, read, update, delete
+from database.db import create_tables
 
 def print_menu():
     print("Menú de opciones:")
@@ -12,6 +13,9 @@ def print_menu():
     print("8. Salir")
 
 def main():
+
+    create_tables()
+
     while True:
         print_menu()
         option = input("Ingrese la opción deseada: ")
